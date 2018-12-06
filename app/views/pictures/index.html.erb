@@ -5,3 +5,18 @@
   <p><%= picture.title %>, <%= picture.artist %></p>
   <%= link_to(image_tag(picture.url), "/pictures/#{picture.id}") %>
 <% end %>
+
+<h1>Most recent pictures</h1>
+<ul>
+  <% @most_recent_pictures.each do |picture| %>
+    <li><%= picture.title %></li>
+  <% end %>
+</ul>
+
+<h1>Pictures from 2018</h1>
+<ul>
+  <% @pictures_2017.each do |picture| %>
+    <li><%= picture.title %></li>
+  <% end %>
+</ul>
+
