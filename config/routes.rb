@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root 'pictures#index'
+
+  get 'users/new' => 'users#new'
+  post 'users' => 'users#create'
+
   get 'pictures' => 'pictures#index'
   
   get 'pictures' => 'pictures#index'
@@ -13,6 +17,11 @@ Rails.application.routes.draw do
   patch 'pictures/:id' => "pictures#update"
 
   delete 'pictures/:id' => 'pictures#destroy'
+
+  post 'session' => 'session#create' 
+  get 'session/new' => 'session#new' 
+
+  delete 'session/:id' => 'session#destroy'
 
 
 end
